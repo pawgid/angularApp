@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Pawel';
+  ServerName = 'Apollo';
+  ServerPID = 11;
+  ServerStatus = 'offline';
+  statusFlag = false;
+
+  toggleServerStatus () {
+    this.statusFlag = !this.statusFlag;
+    if(this.statusFlag === true) {
+      this.ServerStatus = 'online'
+    }
+    return this.ServerStatus;
+  }
 }
