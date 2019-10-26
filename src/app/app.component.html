@@ -15,4 +15,4 @@
 <p>First Name:</p> 
 <input type="text" [(ngModel)]="firstName">
 <p>{{firstName}}</p>
-<button (click) ="resetTheName()">Reset the name</button>
+<button (click) ="resetTheName()" [disabled]="checkName()">Reset the name</button>

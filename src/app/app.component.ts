@@ -13,6 +13,7 @@ export class AppComponent {
   statusFlag = false;
   buttonState = true;
   firstName = 'Pawel';
+  state = false;
 
   constructor() {
     setTimeout(() => {
@@ -32,5 +33,12 @@ export class AppComponent {
 
   resetTheName() {
     this.firstName = ''
+  }
+
+  checkName() {
+    if(this.firstName === '') {
+      this.state = true;
+      return this.state;
+    }
   }
 }
