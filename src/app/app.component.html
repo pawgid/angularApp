@@ -26,3 +26,8 @@
 </ng-template>
 
 <button (click)="toggleFlag()">Toggle flag</button>
+
+<h1>Another name to input</h1>
+<input type="text" placeholder="name" [(ngModel)]="currentName">
+<button (click)="addName()">Submit</button>
+<li *ngFor="let names of anotherName">{{names}}</li>

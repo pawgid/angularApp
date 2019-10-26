@@ -15,6 +15,8 @@ export class AppComponent {
   firstName = 'Pawel';
   state = false;
   flag = true;
+  anotherName = ['Pawel', 'Krzysztof', 'Hermiona'];
+  currentName = '';
 
   constructor() {
     setTimeout(() => {
@@ -54,5 +56,9 @@ export class AppComponent {
     } else {
       return 'red'
     }
+  }
+
+  addName() {
+    this.anotherName.push(this.currentName);
   }
 }
