@@ -14,6 +14,7 @@ export class AppComponent {
   buttonState = true;
   firstName = 'Pawel';
   state = false;
+  flag = true;
 
   constructor() {
     setTimeout(() => {
@@ -40,5 +41,10 @@ export class AppComponent {
       this.state = true;
       return this.state;
     }
+  }
+
+  toggleFlag() {
+    this.flag = !this.flag;
+    return this.flag;
   }
 }
