@@ -17,6 +17,9 @@ export class AppComponent {
   flag = true;
   anotherName = ['Pawel', 'Krzysztof', 'Hermiona'];
   currentName = '';
+  numberOfClicks = 0;
+  pColor = 'black';
+  pStyle = 'black';
 
   constructor() {
     setTimeout(() => {
@@ -60,5 +63,15 @@ export class AppComponent {
 
   addName() {
     this.anotherName.push(this.currentName);
+  }
+
+  getRandomColor() {
+    this.numberOfClicks = this.numberOfClicks+1;
+    var color = Math.floor(Math.random() * 16777216).toString(16);
+    this.pColor = '#000000'.slice(0, -color.length) + color;
+    if(this.numberOfClicks > 5) {
+        this.pStyle = 'red'
+    }
+    return this.pColor;   
   }
 }
