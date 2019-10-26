@@ -17,7 +17,7 @@
 <p>{{firstName}}</p>
 <button (click) ="resetTheName()" [disabled]="checkName()">Reset the name</button>
 
-<h1>This is ngif directive</h1>
+<h1 [ngStyle]="{color: getColor()}">This is ngif directive</h1>
 
 <p *ngIf="flag; else elseblock">Flag is true</p>
 <ng-template #elseblock>
