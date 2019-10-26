@@ -12,6 +12,7 @@ export class AppComponent {
   ServerStatus = 'offline';
   statusFlag = false;
   buttonState = true;
+  firstName = 'Pawel';
 
   constructor() {
     setTimeout(() => {
@@ -27,5 +28,9 @@ export class AppComponent {
       this.ServerStatus = 'offline'
     }
     return this.ServerStatus;
+  }
+
+  resetTheName() {
+    this.firstName = ''
   }
 }

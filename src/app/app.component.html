@@ -11,4 +11,8 @@
 <p>{{ServerPID}}</p>
 <p>{{ServerStatus}}</p>
 
-<button [disabled]="buttonState" (click)="toggleServerStatus()"> Toggle Server Status</button>
+<button [disabled]="buttonState" (click)="toggleServerStatus()"> Toggle Server Status</button><br>
+<p>First Name:</p> 
+<input type="text" [(ngModel)]="firstName">
+<p>{{firstName}}</p>
+<button (click) ="resetTheName()">Reset the name</button>
