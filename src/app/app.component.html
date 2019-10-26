@@ -5,3 +5,5 @@
 <app-green></app-green>
 <app-yellow></app-yellow>
 <p>Server name {{ ServerName }} with Pid {{ ServerPID }} is {{ toggleServerStatus() }}</p>
+
+<button [disabled]="buttonState" (click)="toggleServerStatus()"> Toggle Server Status</button>
